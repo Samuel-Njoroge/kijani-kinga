@@ -79,12 +79,24 @@ python manage.py
 
 ## 🤝 Contributing
 
-Contributions are welcome!:
+Contributions are welcome!
 
-1. Create a feature branch **(git checkout -b feature/xyz)**
+1. Create a feature branch
 
-2. Commit changes **(git commit -m "Add xyz feature")**
+   ```bash
+   git checkout -b feature/xyz
+   ```
 
-3. Push to branch **(git push origin feature/xyz)**
+2. Commit changes
+
+   ```bash
+   git commit -m "Add xyz feature"
+   ```
+
+3. Push to branch
+
+   ```bash
+   git push origin feature/xyz
+   ```
 
 4. Open a Pull Request into **develop**

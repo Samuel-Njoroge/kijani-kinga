@@ -3,7 +3,6 @@
 Kijani Kinga is a **mobile-friendly Django web application** that empowers local residents, rangers, and administrators to report, track, and analyze incidents of illegal logging.  
 The system supports geotagged reports with photos or audio evidence, sends alerts to authorities, and provides an interactive map and analytics dashboard for better decision making.
 
----
 
 ## 🚀 Features
 
@@ -16,7 +15,6 @@ The system supports geotagged reports with photos or audio evidence, sends alert
 - **Notifications** - SMS (Twilio) and Email (SendGrid) alerts for urgent reports.
 - **Analytics dashboard** - Track trends by location, time, and status.
 
----
 
 ## 🛠 Tech Stack
 
@@ -28,7 +26,6 @@ The system supports geotagged reports with photos or audio evidence, sends alert
 - **Task Queue:** Celery + Redis  
 - **Frontend Integration:** Leaflet.js for maps (future React/Next.js support)  
 
----
 
 ## 📡 API Endpoints
 
@@ -41,15 +38,14 @@ The system supports geotagged reports with photos or audio evidence, sends alert
 | `/api/geocoding/reverse-lookup/`      | GET    | Get address from coordinates     |
 | `/api/stats/summary/`                 | GET    | Fetch analytics summary          |
 
----
+
 
 ## 🔐 User Roles
 
-- **Resident** — Submit reports, view own submissions.  
-- **Ranger** — Verify/close reports, receive notifications.  
-- **Admin** — Full access to manage users, reports, and analytics.  
+- **Resident** - Submit reports, view own submissions.  
+- **Ranger** - Verify/close reports, receive notifications.  
+- **Admin** - Full access to manage users, reports, and analytics.  
 
----
 
 ## ⚡ Setup Instructions
 
@@ -79,7 +75,8 @@ python manage.py migrate
 # Start development server
 python manage.py 
 ```
----
+
+
 ## 🤝 Contributing
 
 Contributions are welcome!:

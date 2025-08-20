@@ -2,6 +2,7 @@ from django.db import models
 import uuid
 from django.conf import settings
 from geocoding.models import Location
+from media.models import Media
 
 
 # Report
@@ -13,8 +14,8 @@ class Report(models.Model):
     ]
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     reporter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='report')
-    location = models.UUIDField(primary_key=True)
     title = models.CharField(max_length=255)
+    location = models.UUIDField(primary_key=True)
     description = models.TextField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)

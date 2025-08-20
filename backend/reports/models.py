@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 from django.conf import settings
-from geocoding.models import Location
+#from geocoding.models import Location
 from media.models import Media
 
 
@@ -18,7 +18,7 @@ class Report(models.Model):
     location = models.UUIDField(primary_key=True)
     description = models.TextField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
-    location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
+    #location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
     is_public = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -40,7 +40,7 @@ class ReportMedia(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return f"{self.id} contains {self.media}"
+        return f"{self.id} contains {self.report}"
 
     class Meta:
         db_table = 'report_media'

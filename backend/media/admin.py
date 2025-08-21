@@ -5,6 +5,6 @@ from .models import Media
 # Media.
 @admin.register(Media)
 class MediaAdmin(ModelAdmin):
-    list_display = ('id', 'file', 'media_type', 'updloaded_by')
+    list_display = ('id', 'file', 'media_type', 'uploaded_by')
     search_fields = ('file', 'media_type')
     list_filter = ('file',)

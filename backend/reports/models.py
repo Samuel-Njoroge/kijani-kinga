@@ -15,7 +15,6 @@ class Report(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     reporter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='report')
     title = models.CharField(max_length=255)
-    location = models.UUIDField(primary_key=True)
     description = models.TextField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
@@ -45,4 +44,4 @@ class ReportMedia(models.Model):
     class Meta:
         db_table = 'report_media'
         verbose_name = 'Report Media'
-        verbose_name_plural = 'Report Medias'
+        verbose_name_plural = 'Report Media'

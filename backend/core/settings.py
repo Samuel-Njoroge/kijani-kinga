@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'reports',
     'media',
     'geocoding',
+    'notifications',
 ]
 
 # Cloudinary config

@@ -12,7 +12,7 @@ class Report(models.Model):
         ('verified', 'Verified'),
         ('closed', 'Closed'),
     ]
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     reporter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='report')
     title = models.CharField(max_length=255)
     description = models.TextField()

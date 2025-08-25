@@ -9,7 +9,7 @@ class Media(models.Model):
         ('image', 'Image'),
         ('audio', 'Audio'),
         ]
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     file = models.FileField()
     media_type = models.CharField(max_length=25, choices=MEDIA_TYPES)
     uploaded_at = models.DateTimeField(auto_now_add=True)

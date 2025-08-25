@@ -8,4 +8,5 @@ urlpatterns = [
     path('api/reports/', include('reports.urls')),
     path('api/media/', include('media.urls')),
     path('api/geocoding/', include('geocoding.urls')),
+    path('api/notifications/', include('notifications.urls')),
 ]

@@ -43,6 +43,22 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': config('CLOUDINARY_API_SECRET'),
 }
 
+# Email via SendGrid
+SENDGRID_API_KEY = config("SENDGRID_API_KEY", default=None)
+SENDGRID_FROM_EMAIL = config("SENDGRID_FROM_EMAIL", default="no-reply@example.com")
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_HOST_USER = "apikey"   
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# Twilio
+TWILIO_ACCOUNT_SID = config("TWILIO_ACCOUNT_SID", default=None)
+TWILIO_AUTH_TOKEN = config("TWILIO_AUTH_TOKEN", default=None)
+TWILIO_PHONE = config("TWILIO_PHONE", default=None)
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [

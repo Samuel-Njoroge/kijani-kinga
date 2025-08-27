@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'media',
     'geocoding',
     'notifications',
+    'drf_yasg',
 ]
 
 # Cloudinary config

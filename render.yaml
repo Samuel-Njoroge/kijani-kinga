@@ -2,7 +2,7 @@ databases:
   - name: kijanikingadb
     plan: free
     databaseName: kijani_kinga
-    user: postgres
+    user: kijani_admin
 
 services:
   - type: web

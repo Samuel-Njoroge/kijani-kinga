@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kijani Kinga</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="content-card">
+            <img src="{% static 'images/logo-1.png' %}" alt="Kijani Kinga" class="logo">
+            <h1>Kijani Kinga API</h1>
+            <p>Protecting our planet 🌍 with technology and data</p>
+            <div class="buttons">
+                <a href="{% url 'schema-swagger-ui' %}" class="btn primary">View API Docs</a>
+                <a href="/admin/" class="btn secondary">Admin Panel</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

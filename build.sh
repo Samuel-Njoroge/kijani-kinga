@@ -3,11 +3,12 @@
 # Exit on error
 set -o errexit
 
-# Package manager
+# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
 
-# Convert static asset files
-python manage.py collectstatic --no-input
+# Run database migrations
+python manage.py migrate --noinput
 
-# Database migrations
-python manage.py migrate
+# Collect static files
+python manage.py collectstatic --noinput

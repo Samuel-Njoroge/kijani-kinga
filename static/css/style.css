@@ -1,95 +1,150 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
-    color: #fff;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e8f5e9, #a5d6a7);
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Hero background */
+/* Navbar */
+.navbar {
+  background: #2e7d32;
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo always on the left */
+.nav-logo {
+  flex: 0; /* don’t stretch */
+}
+
+.nav-logo img {
+  height: 50px;
+}
+
+/* Links in the center */
+.nav-links {
+  flex: 1; /* take up available space */
+  display: flex;
+  justify-content: center; /* center links horizontally */
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+/* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") 
-                no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
 }
 
-/* Dark overlay */
-.overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
+.hero h1 {
+  font-size: 3rem;
+  color: #1b5e20;
 }
 
-/* Content card */
-.content-card {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    background: rgba(73, 230, 190, 0.1);
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    max-width: 500px;
+.hero span {
+  color: #388e3c;
 }
 
-/* Logo */
-.logo {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-}
-
-/* Headings */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+.hero p {
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
 }
 
 /* Buttons */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .btn {
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.btn.primary {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
-    color: white;
+.btn-primary {
+  background: #2e7d32;
+  color: #fff;
 }
 
-.btn.secondary {
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.4);
-    color: white;
+.btn-secondary {
+  background: #388e3c;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  background: transparent;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  opacity: 0.9;
+}
+
+/* Forms */
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 4rem 4rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+.form-container form p {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background: #2e7d32;
+  color: white;
+}
+
+.form-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }

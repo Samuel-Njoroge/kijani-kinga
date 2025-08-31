@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kijani Kinga | {% block title %}{% endblock %}</title>
+ 
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="{% static 'images/logo.png' %}" alt="Kijani Kinga Logo">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="/admin/">Admin</a></li>
+          <li><a href="/swagger/">API Docs</a></li>
+          <li><a href="/redoc/">API ReDocs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Kijani Kinga 🌱</p>
+  </footer>
+</body>
+</html>
+
+

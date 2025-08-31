@@ -1,23 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Kijani Kinga</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <div class="content-card">
-            <img src="{% static 'images/logo-1.png' %}" alt="Kijani Kinga" class="logo">
-            <h1>Kijani Kinga API</h1>
-            <p>Protecting our planet 🌍 with technology and data</p>
-            <div class="buttons">
-                <a href="{% url 'schema-swagger-ui' %}" class="btn primary">View API Docs</a>
-                <a href="/admin/" class="btn secondary">Admin Panel</a>
-            </div>
-        </div>
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+  <section class="hero">
+    <h1>Welcome to <span>Kijani Kinga</span></h1>
+    <p>Protecting communities with technology & nature-driven solutions 🌍</p>
+    <div class="btn-group">
+      <a href="{% url 'signup' %}" class="btn btn-primary">Get Started</a>
+      <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
+      <a href="/admin/" class="btn btn-secondary">Admin</a>
+      <a href="/swagger/" class="btn btn-outline">API Docs</a>
+      <a href="/redoc/" class="btn btn-outline">API ReDocs</a>
     </div>
-</body>
-</html>
+  </section>
+{% endblock %}

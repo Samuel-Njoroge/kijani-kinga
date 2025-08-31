@@ -3,6 +3,8 @@
 Kijani Kinga is a **mobile-friendly Django web application** that empowers local residents, rangers, and administrators to report, track, and analyze incidents of illegal logging.  
 The system supports geotagged reports with photos or audio evidence, sends alerts to authorities, and provides an interactive map and analytics dashboard for better decision making.
 
+**Web App Link**  - [Kijani Kinga API](https://kijani-kinga.onrender.com)
+
 
 ## 🚀 Features
 
@@ -36,7 +38,7 @@ The system supports geotagged reports with photos or audio evidence, sends alert
 | `/api/reports/<id>/close/`            | POST   | Close a report                   |
 | `/api/media/upload/`                  | POST   | Upload media to Cloudinary       |
 | `/api/geocoding/reverse-lookup/`      | GET    | Get address from coordinates     |
-| `/api/stats/summary/`                 | GET    | Fetch analytics summary          |
+| `/api/notifications/`                 | GET    | Send notifications               |
 
 
 
